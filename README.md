@@ -6,6 +6,7 @@
 1. **Appium** (el servidor que envía comandos al dispositivo) https://appium.io/docs/en/latest/quickstart/install/
 1. Este repositorio (**`git clone git@github.com:rafael-mazariegos-distelsa/appium-typescript-base.git`**)
 1. Las dependencias del repositorio (**`npm install`**). WebDriverIO, Appium, UIAutomator2.
+1. En el **.env**, es necesario configurar la plataforma (**`PLATFORM=android`**)
 1. Opcional: **Appium Inspector** para obtener los locators de elementos de la app: https://github.com/appium/appium-inspector
 
 ### Dónde está lo importante
