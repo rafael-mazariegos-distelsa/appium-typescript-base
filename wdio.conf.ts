@@ -1,4 +1,21 @@
+import {androidCaps} from './config/capabilities/android'
+import {iosCaps} from './config/capabilities/ios'
+
+type Platform = 'android' | 'ios'
+
+const platform = (process.env.PLATFORM ?? 'android') as Platform
+
+const capabilitiesMap = {
+    android: androidCaps,
+    ios: iosCaps
+}
+
+if (!capabilitiesMap[platform]) {
+    throw new Error(`Unsupported PLATFORM: ${platform}`)
+}
+
 export const config: WebdriverIO.Config = {
+    
 
     runner: 'local',
     tsConfigPath: './tsconfig.json',
@@ -12,15 +29,7 @@ export const config: WebdriverIO.Config = {
         // 'path/to/excluded/files'
     ],
     maxInstances: 10,
-    capabilities: [{
-        "platformName": "Android",
-        "appium:automationName": "UiAutomator2",
-        "appium:deviceName": "Android Device",
-        "appium:udid": "R5CY13Q25XE",
-        "appium:appPackage": "com.distelsa.maxgt",
-        "appium:appActivity": ".MainActivity",
-        "appium:noReset": true
-    }],
+    capabilities: [capabilitiesMap[platform]],
 
     logLevel: 'info',
     bail: 0,
