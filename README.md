@@ -7,7 +7,7 @@
 1. **Android Studio** que contiene la herramienta ADB para detectar dispositivos.
 1. Este repositorio (**`git clone git@github.com:rafael-mazariegos-distelsa/appium-typescript-base.git`**)
 1. Las dependencias del repositorio (**`npm install`**). WebDriverIO, Appium, UIAutomator2.
-1. En el **.env**, es necesario configurar la plataforma (**`PLATFORM=android`**)
+1. En el **.env**, es necesario configurar la plataforma (**`PLATFORM=android`**) y el ID del dispositivo (**`DEVICE_ID`**)
 1. Opcional: **Appium Inspector** para obtener los locators de elementos de la app: https://github.com/appium/appium-inspector
 
 ### Dónde está lo importante
