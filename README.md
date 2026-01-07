@@ -4,6 +4,7 @@
 
 1. **Node.js** para correr Appium y el proyecto. https://nodejs.org/en/download
 1. **Appium** (el servidor que envía comandos al dispositivo) https://appium.io/docs/en/latest/quickstart/install/
+1. **Android Studio** que contiene la herramienta ADB para detectar dispositivos.
 1. Este repositorio (**`git clone git@github.com:rafael-mazariegos-distelsa/appium-typescript-base.git`**)
 1. Las dependencias del repositorio (**`npm install`**). WebDriverIO, Appium, UIAutomator2.
 1. En el **.env**, es necesario configurar la plataforma (**`PLATFORM=android`**)
